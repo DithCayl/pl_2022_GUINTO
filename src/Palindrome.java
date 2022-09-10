@@ -1,12 +1,12 @@
 import java.util.*;
 
-public class Palendrome {
+public class Palindrome {
 
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Palendrome Checker\n\n");
+        System.out.print("Palindrome Checker\n");
 
         while(true) {
 
@@ -15,18 +15,18 @@ public class Palendrome {
                 System.out.print("Enter word/phrase: ");
                 input = scan.nextLine();
             }
-            PalendromeChecker pCheck = new PalendromeChecker();
-            System.out.print(pCheck.PalendromeCheck(input));
+            PalindromeChecker pCheck = new PalindromeChecker();
+            System.out.print(pCheck.PalindromeCheck(input));
         }
     }
 }
-class PalendromeChecker {
+class PalindromeChecker {
 
     String input="";
     String inputAccepted="";
-    String inputPalendrome="";
+    String inputPalindrome ="";
 
-    public String PalendromeCheck(String inpt) {
+    public String PalindromeCheck(String inpt) {
 
         input = inpt;
         //Accept Input
@@ -38,13 +38,13 @@ class PalendromeChecker {
         }
         //Reverse the input
         for(int i = inputAccepted.length()-1; i >=0; i-- ) {
-            inputPalendrome+=inputAccepted.charAt(i);
+            inputPalindrome +=inputAccepted.charAt(i);
         }
 
-        if(inputAccepted.equals(inputPalendrome))
-            return input +" is a palendrome\n\n";
+        if(inputAccepted.equals(inputPalindrome))
+            return input +" is a palindrome\n\n";
 
-        return input +" is NOT a palendrome\n\n";
+        return input +" is NOT a palindrome\n\n";
 
     }
 }
